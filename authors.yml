@@ -1,0 +1,18 @@
+version: 1
+project:
+  contributors:
+    - id: pao_corrales
+      name: Pao Corrales
+      orcid: 0000-0003-1923-9129
+      github: paocorrales
+      affiliation: 
+        - id: org_a
+        - id: org_b
+
+  affiliation: 
+    - id: org_a
+      name: The Australian National University
+      url: https://www.anu.edu.au/
+    - id: org_b
+      name: Monash University
+      url: https://www.monash.edu/

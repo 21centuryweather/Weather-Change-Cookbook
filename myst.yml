@@ -1,0 +1,45 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+extends:
+  - ./authors.yml
+project:
+  id: 68baa6ad-dff8-444f-b689-02de234419b5
+  title: Navigation
+  # description:
+  # keywords: []
+  # authors: []
+  # github: 21centuryweater/Weather-Change-Cookbook
+  toc:
+    - file: intro.md
+ 
+    - title: Recipes
+      file: recipes/index.md
+      children:
+        #- title: Cold fronts
+          #file: recipes/cold-fronts/index.md
+          #children:
+        - file: recipes/cold-fronts/cold-fronts-analysis.ipynb
+ 
+    - title: Contributing
+      file: contributing/index.md
+      children:
+        - file: contributing/setup.md
+        - file: contributing/writing-a-recipe.md
+        - file: contributing/style-guide.md
+        - file: contributing/submitting.md
+
+site:
+  template: book-theme
+  nav: 
+    - title: The Weather Change Cookbook
+  actions:
+    - title: GitHub
+      url: https://github.com/21centuryweather
+  options:
+    logo: style/logo.png
+    logo_text: The Weather Change Cookbook
+    style: style/custom.css
+    favicon: style/favicon.ico
+    
+  parts:
+    footer: footer.md
