@@ -6,7 +6,7 @@
 
 Before running the notebook locally you will need to install the necessary dependencies and download the data. 
 
-* Dependencies:
+* Python dependencies:
 
 ```bash
 conda env create -f environment.yml

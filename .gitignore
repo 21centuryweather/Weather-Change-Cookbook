@@ -221,3 +221,4 @@ __marimo__/
 
 _build/
 recipes/**/*.zip.sha256
+recipes/**/*.zip
