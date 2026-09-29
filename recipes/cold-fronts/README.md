@@ -12,7 +12,7 @@ Before running the notebook locally you will need to install the necessary depen
 conda env create -f environment.yml
 conda activate cold-fronts
 ```
-* Data
+* Data:
 
 ```
 python download_cold-fronts.py
