@@ -30,6 +30,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - uses: actions/setup-node@v7
@@ -37,6 +44,10 @@ jobs:
           node-version: 24.x
       - name: Install MyST
         run: npm install -g mystmd
+
+      - name: Build per-recipe download zips
+        run: python scripts/build_recipes_zip.py
+
       - name: Build HTML Assets
         run: myst build --html
       - name: Upload artifact
