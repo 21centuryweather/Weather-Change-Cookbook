@@ -45,6 +45,16 @@ jobs:
       - name: Install MyST
         run: npm install -g mystmd
 
+      - name: Cache recipe zips
+        uses: actions/cache@v4
+        with:
+          path: |
+            recipes/**/*.zip
+            recipes/**/*.zip.sha256
+          key: recipe-zips-${{ hashFiles('recipes/**/*.ipynb', 'recipes/**/*.py', 'recipes/**/README.md', 'recipes/**/environment.yml') }}
+          restore-keys: |
+            recipe-zips-
+
       - name: Build per-recipe download zips
         run: python scripts/build_recipes_zip.py
 

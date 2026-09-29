@@ -3,16 +3,16 @@
 Create one zip per recipe, saved next to the recipe's notebook.
 
 A "recipe" is any folder under recipes/ that directly contains a .ipynb file.
-For recipes/cold-fronts/cold-front-analysis.ipynb this produces
-recipes/cold-fronts/cold-fronts.zip (named after the folder), which the
-notebook's `downloads:` frontmatter points at.
 
-Only rebuilds a recipe's zip if something inside it has changed since the
-zip was last created -- this keeps local rebuilds and CI runs fast once a
-project has many recipes.
+Only rebuilds a recipe's zip if its files have actually changed, based on a
+content hash -- not on file modified-times. Timestamps aren't reliable here:
+a fresh `git checkout` resets every file's mtime to "now", and in CI a
+restored cache can end up with an even *later* mtime than the source files
+it's meant to be checked against. A content hash sidesteps all of that.
 
 Run this BEFORE `myst build --html` (locally and in CI).
 """
+import hashlib
 import zipfile
 from pathlib import Path
 
@@ -56,18 +56,14 @@ def files_in(recipe: Path):
     return sorted(seen)
 
 
-def needs_rebuild(zip_path: Path, files: list[Path]) -> bool:
-    """True if the zip is missing or older than any of its source files."""
-    if not zip_path.exists():
-        return True
-    zip_mtime = zip_path.stat().st_mtime
-    return any(f.stat().st_mtime > zip_mtime for f in files)
-
-
-def build_zip(recipe: Path, files: list[Path], zip_path: Path):
-    with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
-        for f in files:
-            zf.write(f, Path(recipe.name) / f.relative_to(recipe))
+def content_hash(recipe: Path, files: list[Path]) -> str:
+    """Hash of every included file's relative path + content, order-independent
+    of filesystem timestamps."""
+    h = hashlib.sha256()
+    for f in files:  # `files` is already sorted, so this is deterministic
+        h.update(str(f.relative_to(recipe)).encode())
+        h.update(f.read_bytes())
+    return h.hexdigest()
 
 
 def main():
@@ -78,16 +74,24 @@ def main():
     for recipe in dirs:
         files = files_in(recipe)
         zip_path = recipe / f"{recipe.name}.zip"
+        hash_path = recipe / f"{recipe.name}.zip.sha256"
 
         if not files:
             print(f"[skip] {recipe.relative_to(ROOT)}: no matching files")
             continue
 
-        if not needs_rebuild(zip_path, files):
+        current_hash = content_hash(recipe, files)
+        previous_hash = hash_path.read_text().strip() if hash_path.exists() else None
+
+        if zip_path.exists() and current_hash == previous_hash:
             print(f"[up to date] {recipe.relative_to(ROOT)}: {zip_path.name}")
             continue
 
-        build_zip(recipe, files, zip_path)
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            for f in files:
+                zf.write(f, Path(recipe.name) / f.relative_to(recipe))
+        hash_path.write_text(current_hash)
+
         print(f"[built] {recipe.relative_to(ROOT)}: {len(files)} files -> {zip_path.name}")
 
 
