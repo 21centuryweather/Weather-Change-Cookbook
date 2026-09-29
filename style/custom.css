@@ -1,0 +1,200 @@
+/* 21st Century Weather styling for a MyST book-theme site.
+   This stylesheet is loaded from myst.yml via site.options.style.
+   Light and dark mode are handled via the html.dark class. */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+:root {
+  --cw-text: #231F20;  
+  --cw-navy: #123a4b;        
+  --cw-blue: #0C93BD;        
+  --cw-light-blue: #05C1E8;  
+  --cw-link-hover: #0a7596;  
+  --cw-border: rgba(18, 58, 75, 0.12);
+  --cw-pink: #F4857F;        
+  --cw-rust: #B7533D;   
+  --cw-gray: #96989A; 
+  --cw-light-gray: #C9C9CA;    
+  --cw-whiteish: #F7F7F7;
+}
+
+body {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 400;
+  min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  color: var(--cw-blue) !important;   /* readable on both light and dark backgrounds */
+}
+
+main a,
+article a,
+.hover-link,
+.hover-text {
+  color: var(--cw-rust) !important;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--cw-rust);
+  text-underline-offset: 0.18em;
+}
+
+main a:hover,
+article a:hover,
+.hover-link:hover,
+.hover-text:hover {
+  color: var(--cw-pink) !important;
+  text-decoration-color: var(--cw-pink);
+}
+
+figcaption a,
+figcaption a:hover,
+figure figcaption a,
+figure figcaption a:hover {
+  text-decoration: none !important;
+}
+
+
+.myst-admonition {
+  border-color: var(--cw-rust) !important;
+}
+
+.myst-admonition-header-icon {
+  color: var(--cw-rust);
+}
+
+.myst-admonition-header {
+  background-color: rgba(183, 83, 61, 0.10) !important;
+}
+
+.myst-code {
+  border-color: var(--cw-gray) !important;
+}
+
+.myst-toc-item-exact {
+  background-color: rgba(183, 83, 61, 0.10) !important;
+}
+
+.myst-toc-item-exact,
+.myst-toc-item-exact *,
+.myst-toc-item .font-semibold.text-myst-accent-text,
+.myst-toc-item .font-semibold.text-myst-accent-text * {
+  color: var(--cw-rust) !important;
+  font-weight: 700 !important;
+}
+
+.myst-footer-links:hover,
+.myst-footer-links:focus,
+.myst-footer-links:focus-visible,
+.myst-footer-links a:hover,
+.myst-footer-links a:focus,
+.myst-footer-links a:focus-visible {
+  border-color: var(--cw-pink) !important;
+}
+
+/* Footer layout and 21st Century Weather palette, imported by custom.css. */
+
+
+.footer {
+  --footer-link: var(--cw-rust);
+  --footer-link-hover: var(--cw-pink);
+  --footer-text: var(var(--cw-rust));
+
+  flex-shrink: 0;
+  padding: 2rem 3.5rem;
+  background-color: var(--cw-whiteish) !important;
+  color: var(--cw-text) !important;
+}
+
+html.dark .footer {
+  background-color: #0f0f0f !important;
+  color: var(--cw-whiteish) !important;
+
+  --footer-link: var(--cw-light-blue);
+  --footer-link-hover: var(--cw-link-hover);
+  --footer-text: var(var(--cw-light-blue));
+}
+
+.footer .outer-grid {
+  grid-template-columns: 5fr 5fr 5fr;
+ 
+  margin-bottom: 0;
+}
+
+
+
+.footer a,
+.footer a:visited {
+  color: var(--footer-link) !important;
+  text-decoration-color: currentColor;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--footer-link-hover) !important;
+}
+
+.footer h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cw-rust) !important;
+}
+
+html.dark .footer h1 {
+  color: var(--cw-light-blue) !important;
+}
+
+.footer-logo-dark {
+  display: none;
+}
+
+html.dark .footer-logo-light {
+  display: none !important;
+}
+
+html.dark .footer-logo-dark {
+  display: block !important;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+.social-links p {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  margin-inline: 0.2rem;
+  line-height: 0;
+}
+
+.social-links img {
+  width: 22px;
+  height: 22px;
+}
+
+html.dark .social-links img {
+  width: 22px;
+  height: 22px;
+  /* Simple Icons ship as black SVGs; this turns any solid-black icon white
+     so it reads on the blue footer, without needing separate coloured files. */
+  filter: brightness(0) invert(1);
+  transition: opacity 0.15s ease;
+}
+
+.social-links a:hover img {
+  opacity: 0.65;
+}
