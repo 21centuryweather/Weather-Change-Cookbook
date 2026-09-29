@@ -2,7 +2,7 @@
 
 **Pao Corrales**
 
-## Instructions
+## Instructions to use this recipe
 
 Before running the notebook locally you will need to install the necessary dependencies and download the data. 
 
