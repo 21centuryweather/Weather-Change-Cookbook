@@ -32,6 +32,7 @@ site:
   template: book-theme
   nav: 
     - title: The Weather Change Cookbook
+      url: intro.md
   actions:
     - title: GitHub
       url: https://github.com/21centuryweather

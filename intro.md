@@ -1,3 +1,7 @@
+---
+downloads: []
+---
+
 # Welcome!
 
 Welcome to the 21st Century Weather Change Cookbook! This cookbook is a collection of recipes for analysing and visualising weather and climate data. Each recipe is a self-contained analysis that demonstrates a specific technique or method for working with weather and climate data.
