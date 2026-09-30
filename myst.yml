@@ -21,8 +21,8 @@ project:
     - title: Contributing
       file: contributing/index.md
       children:
-        - file: contributing/setup.md
-        - file: contributing/writing-a-recipe.md
+        - file: contributing/template.ipynb
+        - file: contributing/README.md
         - file: contributing/style-guide.md
         - file: contributing/submitting.md
 
