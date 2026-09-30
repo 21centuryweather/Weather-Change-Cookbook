@@ -16,8 +16,6 @@ project:
       file: recipes/index.md
       children:
         #- title: Cold fronts
-          #file: recipes/cold-fronts/index.md
-          #children:
         - file: recipes/cold-fronts/cold-fronts-analysis.ipynb
  
     - title: Contributing
