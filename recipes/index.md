@@ -1,3 +1,4 @@
 # Recipes
 
-Automatic toc?
+```{toctree}
+```
