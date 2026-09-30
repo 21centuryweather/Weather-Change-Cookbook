@@ -10,7 +10,6 @@
   --cw-navy: #123a4b;        
   --cw-blue: #0C93BD;        
   --cw-light-blue: #05C1E8;  
-  --cw-link-hover: #0a7596;  
   --cw-border: rgba(18, 58, 75, 0.12);
   --cw-pink: #F4857F;        
   --cw-rust: #B7533D;   
@@ -34,12 +33,13 @@ h1, h2, h3, h4, h5, h6 {
 
 main a,
 article a,
+link,
 .hover-link,
 .hover-text {
   color: var(--cw-rust) !important;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--cw-rust);
+  text-decoration-color: var(--cw-rust) !important;
   text-underline-offset: 0.18em;
 }
 
@@ -48,7 +48,19 @@ article a:hover,
 .hover-link:hover,
 .hover-text:hover {
   color: var(--cw-pink) !important;
-  text-decoration-color: var(--cw-pink);
+  text-decoration-color: var(--cw-pink) !important;
+}
+
+.hover\:border-l-myst-active:hover {
+    border-left-color: var(--cw-pink) !important;
+}
+
+.bg-myst-active-surface {
+    background-color: rgba(183, 83, 61, 0.10) !important;
+}
+
+.border-l-myst-active {
+    border-left-color: var(--cw-rust) !important;
 }
 
 figcaption a,
@@ -87,14 +99,6 @@ figure figcaption a:hover {
   font-weight: 700 !important;
 }
 
-.myst-footer-links:hover,
-.myst-footer-links:focus,
-.myst-footer-links:focus-visible,
-.myst-footer-links a:hover,
-.myst-footer-links a:focus,
-.myst-footer-links a:focus-visible {
-  border-color: var(--cw-pink) !important;
-}
 
 /* Footer layout and 21st Century Weather palette, imported by custom.css. */
 
