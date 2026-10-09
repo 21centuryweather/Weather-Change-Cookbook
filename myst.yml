@@ -3,12 +3,16 @@ version: 1
 extends:
   - ./authors.yml
 project:
+  open_access: true
+  license:
+    content: CC-BY-4.0
+    code: Apache-2.0
   id: 68baa6ad-dff8-444f-b689-02de234419b5
   title: Navigation
   # description:
   # keywords: []
   # authors: []
-  # github: 21centuryweater/Weather-Change-Cookbook
+  github: https://github.com/21centuryweather/Weather-Change-Cookbook/
   toc:
     - file: intro.md
  
@@ -28,12 +32,12 @@ project:
 
 site:
   template: book-theme
-  nav: 
-    - title: The Weather Change Cookbook
-      url: /intro.md
+
   actions:
     - title: GitHub
       url: https://github.com/21centuryweather
+    - title: 21st Century Wather
+      url: https://21centuryweather.org.au
   options:
     logo: style/logo.png
     logo_text: The Weather Change Cookbook
