@@ -16,6 +16,7 @@ project:
       file: recipes/index.md
       children:
         #- title: Cold fronts
+        - file: recipes/coastal_winds/coastal_wind_analysis.ipynb
         - file: recipes/cold-fronts/cold-fronts-analysis.ipynb
  
     - title: Contributing
