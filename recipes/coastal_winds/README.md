@@ -21,3 +21,7 @@ python download_coastal_winds.py
 ```
 
 This will create a `data/` folder with the necessary data to run the notebook.
+
+* Run the recipe:
+
+Now you have all the components of the recipe (the code and data). When running the recipe, make sure that the `coastal_winds/` folder is the working directory, by opening that folder in your preferred Python GUI.
