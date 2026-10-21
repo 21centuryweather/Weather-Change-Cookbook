@@ -108,6 +108,10 @@ figure figcaption a:hover {
   border-color: var(--cw-pink) !important;
 }
 
+.my-5 a:hover {
+  border-color: var(--cw-pink) !important;
+}
+
 /* Footer layout and 21st Century Weather palette, imported by custom.css. */
 .footer {
   --footer-link: var(--cw-rust);
