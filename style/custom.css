@@ -104,10 +104,11 @@ figure figcaption a:hover {
   font-weight: 700 !important;
 }
 
+.myst-footer-links a:hover {
+  border-color: var(--cw-pink) !important;
+}
 
 /* Footer layout and 21st Century Weather palette, imported by custom.css. */
-
-
 .footer {
   --footer-link: var(--cw-rust);
   --footer-link-hover: var(--cw-pink);
