@@ -112,6 +112,10 @@ figure figcaption a:hover {
   border-color: var(--cw-pink) !important;
 }
 
+.myst-listing-cover {
+  background-color: transparent !important;
+}
+
 /* Footer layout and 21st Century Weather palette, imported by custom.css. */
 .footer {
   --footer-link: var(--cw-rust);

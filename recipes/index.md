@@ -6,4 +6,5 @@
 :::{listing}
 :source: toc
 :display: gallery
+:grid-columns: 3
 :::
