@@ -55,8 +55,13 @@ jobs:
           restore-keys: |
             recipe-zips-
 
-      - name: Build per-recipe download zips
-        run: python scripts/build_recipes_zip.py
+      - name: Build recipe zips and Binder branches
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/build_zips.py \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
 
       - name: Build HTML Assets
         run: myst build --html

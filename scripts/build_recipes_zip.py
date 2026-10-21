@@ -13,6 +13,10 @@ it's meant to be checked against. A content hash sidesteps all of that.
 Run this BEFORE `myst build --html` (locally and in CI).
 """
 import hashlib
+import shutil
+import subprocess
+import sys
+import tempfile
 import zipfile
 from pathlib import Path
 
@@ -65,8 +69,31 @@ def content_hash(recipe: Path, files: list[Path]) -> str:
         h.update(f.read_bytes())
     return h.hexdigest()
 
+def publish_branch(recipe: Path, files: list[Path], remote: str):
+    """Create or update binder-<recipe> with just this recipe's files at its root."""
+    branch = f"binder-{recipe.name}"
+    with tempfile.TemporaryDirectory() as tmp:
+        for f in files:
+            dest = Path(tmp) / f.relative_to(recipe)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(f, dest)
+ 
+        def git(*args):
+            subprocess.run(
+                ["git", "-c", "user.name=binder-bot",
+                 "-c", "user.email=binder-bot@users.noreply.github.com", *args],
+                cwd=tmp, check=True, capture_output=True,
+            )
+ 
+        git("init", "-q", "-b", branch)
+        git("add", "-A")
+        git("commit", "-q", "-m", f"Binder environment for {recipe.name}")
+        git("push", "-q", "-f", remote, branch)
+    return branch
+
 
 def main():
+    remote = sys.argv[1] if len(sys.argv) > 1 else None
     dirs = recipe_dirs()
     if not dirs:
         raise SystemExit(f"No recipes found under {RECIPES}")
@@ -87,12 +114,20 @@ def main():
             print(f"[up to date] {recipe.relative_to(ROOT)}: {zip_path.name}")
             continue
 
+        # Build zip file
         with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
             for f in files:
                 zf.write(f, Path(recipe.name) / f.relative_to(recipe))
-        hash_path.write_text(current_hash)
 
         print(f"[built] {recipe.relative_to(ROOT)}: {len(files)} files -> {zip_path.name}")
+        
+        # Publish branch 
+        branch = publish_branch(recipe, files, remote)
+        print(f"[pushed] {branch}")
+                
+        hash_path.write_text(current_hash)
+
+
 
 
 if __name__ == "__main__":
