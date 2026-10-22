@@ -24,7 +24,7 @@ project:
         - file: recipes/cold-fronts/cold-fronts-analysis.ipynb
  
     - title: Contributing
-      file: contributing/index.md
+      file: contributing/contributing.md
       children:
         - file: contributing/template.ipynb
         - file: contributing/README.md
