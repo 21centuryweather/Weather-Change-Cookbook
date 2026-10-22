@@ -2,6 +2,7 @@ name: coastal_winds
 channels:
   - conda-forge
 dependencies:
+  - python=3.12
   - cartopy=0.24.0
   - dask=2025.5.1
   - metpy=1.7.0
@@ -10,7 +11,6 @@ dependencies:
   - xarray=2025.4.0
   - pandas=2.2.3
   - pyproj=3.6.1
-  - metpy=1.7.0
   - scipy=1.15.2
   - scikit-image=0.25.2
   - zarr=2.18.7
