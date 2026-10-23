@@ -8,12 +8,43 @@ project:
       affiliation: 
         - id: anu
         - id: monash
+
     - id: andrew_brown
       name: Andrew Brown
       orcid: 0000-0001-7354-295X
       github: andrewbrown31
       affiliation: 
         - id: unimelb
+
+    - id: michael_barnes
+      name: Michael Barnes
+      orcid: 0000-0001-8056-8875
+      affiliation: 
+        - id: monash
+
+    - id: frans_liqui_lung
+      name: Frans Liqui Lung
+      orcid: 0000-0002-7835-2132
+      affiliation: 
+        - id: monash
+
+    - id: christian_jakob
+      name: Christian Jakob
+      orcid: 0000-0002-5012-3207
+      affiliation: 
+        - id: monash
+
+    - id: andrew_gunn
+      name: Andrew Gunn
+      orcid: 0000-0003-1386-0897
+      affiliation: 
+        - id: monash
+
+    - id: michael_reeder
+      name: Michael J. Reeder
+      orcid: 0000-0002-4583-5875
+      affiliation: 
+        - id: monash
 
   affiliation: 
     - id: anu

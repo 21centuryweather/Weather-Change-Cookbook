@@ -19,7 +19,7 @@ project:
     - title: Recipes
       file: recipes/index.md
       children:
-        #- title: Cold fronts
+        - file: recipes/synoptic-weather-types/swt_analysis.ipynb
         - file: recipes/coastal_winds/coastal_wind_analysis.ipynb
         - file: recipes/cold-fronts/cold-fronts-analysis.ipynb
  
