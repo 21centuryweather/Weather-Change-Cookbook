@@ -20,9 +20,7 @@
 
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-/*   font-size: 18px; */
-  line-height: 1.8;
-  font-weight: 300 !important;
+  font-weight: 300;
   min-height: 100%;
 }
 
@@ -34,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 .myst-bibliography-header {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   color: var(--cw-blue) !important;   
+}
+
+html {
+  font-size: 112.5%;  
 }
 
 main a,
