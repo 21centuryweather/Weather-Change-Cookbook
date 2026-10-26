@@ -2,7 +2,7 @@
    This stylesheet is loaded from myst.yml via site.options.style.
    Light and dark mode are handled via the html.dark class. */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 
 :root {
@@ -20,9 +20,9 @@
 
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+/*   font-size: 18px; */
   line-height: 1.8;
-  font-weight: 400;
+  font-weight: 300 !important;
   min-height: 100%;
 }
 
