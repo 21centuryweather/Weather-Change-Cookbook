@@ -46,6 +46,7 @@ site:
     logo_text: The Weather Change Cookbook
     style: style/custom.css
     favicon: style/favicon.ico
+    analytics_google: G-9M1RNYGJ6G
     
   parts:
     footer: footer.md
