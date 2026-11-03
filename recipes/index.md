@@ -1,3 +1,7 @@
+---
+downloads: []
+---
+
 # Recipes
 
 :::{searchfilter} .myst-listing-gallery .myst-card
