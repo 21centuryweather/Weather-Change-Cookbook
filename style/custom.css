@@ -20,7 +20,7 @@
 
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   min-height: 100%;
 }
 
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-  font-size: 112.5%;  
+  font-size: 105%;  
 }
 
 main a,
@@ -116,6 +116,15 @@ figure figcaption a:hover {
 
 .myst-listing-cover {
   background-color: transparent !important;
+}
+
+.myst-fm-downloads-icon {
+  stroke: var(--cw-rust) !important;
+}
+
+.myst-fm-downloads-button:hover .myst-fm-downloads-icon,
+.myst-fm-downloads-icon:hover {
+  stroke: var(--cw-pink) !important;
 }
 
 /* Footer layout and 21st Century Weather palette, imported by custom.css. */
