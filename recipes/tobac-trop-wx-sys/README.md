@@ -20,3 +20,15 @@ python download_data.py
 ```
 
 This script should create a `data/` directory containing 5 (five) `netcdf` (`.nc`) files.
+
+## Instructions to use this recipe on mybinder
+
+To run this notebook on mybinder, click the binder badge. This will open a new browser window with a Jupyter notebook interface where you can run the code without installing the environment locally. 
+
+Then, on the terminal inside the binder interface, run the following command to download the data:
+
+```
+python download_swt.py
+```
+
+This will create a `data/` folder with the necessary data to run the notebook.
