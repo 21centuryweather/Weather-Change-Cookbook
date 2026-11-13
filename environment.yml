@@ -1,0 +1,15 @@
+name: swt
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - matplotlib
+  - pandas
+  - cartopy
+  - xarray
+  - numpy
+  - ipykernel
+  - scipy
+  - metpy
+  - netcdf4
+  - cfgrib
