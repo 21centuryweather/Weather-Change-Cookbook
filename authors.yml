@@ -53,6 +53,20 @@ project:
       affiliation: 
         - id: monash
 
+    - id: dongqi_lin
+      name: Dongqi Lin
+      orcid: 0000-0003-3955-5882
+      github: dongqi-DQ
+      affiliation: 
+        - id: monash    
+
+    - id: martin_singh
+      name: Martin Singh
+      orcid: 0000-0002-4584-0885
+      github: mssingh
+      affiliation: 
+        - id: monash 
+    
     - id: alex_dunne
       name: Alex Dunne
       orcid:  0009-0004-5256-2627
