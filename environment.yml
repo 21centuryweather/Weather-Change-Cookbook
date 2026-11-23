@@ -1,0 +1,10 @@
+name: cold-fronts
+channels:
+  - conda-forge
+dependencies:
+  - netcdf4
+  - xarray
+  - matplotlib
+  - jupyter
+  - dask
+  - cartopy
