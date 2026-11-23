@@ -53,6 +53,12 @@ project:
       affiliation: 
         - id: monash
 
+    - id: alex_dunne
+      name: Alex Dunne
+      orcid:  0009-0004-5256-2627
+      affiliation: 
+        - id: monash
+
   affiliation: 
     - id: anu
       name: The Australian National University
