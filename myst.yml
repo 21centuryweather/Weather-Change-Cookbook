@@ -17,13 +17,22 @@ project:
     - file: intro.md
  
     - title: Recipes
-      file: recipes/index.md
+      file: recipes/recipes.md
       children:
         - file: recipes/synoptic-weather-types/swt_analysis.ipynb
         - file: recipes/tobac-trop-wx-sys/tobac_example.ipynb
         - file: recipes/coastal_winds/coastal_wind_analysis.ipynb
         - file: recipes/cold-fronts/cold-fronts-analysis.ipynb
- 
+
+    - title: Beginners Guide
+      file: recipes/beginners_guide/beginners_guide.md
+      children:
+        - file: recipes/beginners_guide/section_1.ipynb
+        - file: recipes/beginners_guide/section_2.ipynb
+        - file: recipes/beginners_guide/section_3.ipynb
+        - file: recipes/beginners_guide/section_4.ipynb
+        - file: recipes/beginners_guide/section_5.ipynb
+
     - title: Contributing
       file: contributing/contributing.md
       children:

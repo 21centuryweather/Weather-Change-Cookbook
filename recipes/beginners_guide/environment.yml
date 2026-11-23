@@ -1,0 +1,12 @@
+name: beginners_guide
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - xarray
+  - matplotlib
+  - ipykernel
+  - netcdf4
+  - dask
+  - requests
+
