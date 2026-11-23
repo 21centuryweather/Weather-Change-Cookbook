@@ -22,6 +22,7 @@ project:
         - file: recipes/synoptic-weather-types/swt_analysis.ipynb
         - file: recipes/tobac-trop-wx-sys/tobac_example.ipynb
         - file: recipes/coastal_winds/coastal_wind_analysis.ipynb
+        - file: recipes/spectral-plume-model/SPM_analysis.ipynb
         - file: recipes/cold-fronts/cold-fronts-analysis.ipynb
 
     - title: Beginners Guide
