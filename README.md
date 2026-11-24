@@ -43,7 +43,7 @@ If you use this cookbook or one of its recipes in your work, please cite it:
   author = {[TODO: authors or organisation]},
   title  = {The Weather Change Cookbook},
   year   = {2026},
-  url    = {https://21centuryweather.github.io/Weather-Change-Cookbook/},
+  url    = {https://cookbook.21centuryweather.org.au},
   note   = {[TODO: add version and DOI once available]}
 }
 ```
