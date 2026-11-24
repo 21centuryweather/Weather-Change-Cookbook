@@ -1,10 +1,12 @@
 # The Weather Change Cookbook
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24488382.svg)](https://doi.org/10.5281/zenodo.24488382)
+
 This cookbook is a collection of recipes for analysing and visualising weather and climate data. Each recipe is a self-contained analysis that demonstrates a specific technique or method for working with weather and climate data.
 
 This is a project of the ARC Centre of Excellence for the Weather of the 21st Century. We research how Australia’s weather is being reshaped by climate change.
 
-**Website:** <https://21centuryweather.github.io/Weather-Change-Cookbook/>
+**Website:** <https://cookbook.21centuryweather.org.au>
 
 Every recipe is designed to be:
 
@@ -16,7 +18,7 @@ Every recipe is designed to be:
 
 ### Read them on the website
 
-Browse all recipes at <https://21centuryweather.github.io/Weather-Change-Cookbook/>.
+Browse all recipes at <https://cookbook.21centuryweather.org.au>.
 
 ### Download a recipe
 
@@ -28,7 +30,7 @@ Some recipes have a **Launch on Binder** button on their page, which opens the n
 
 ## Contributing
 
-Contributions are welcome! Whether that's a new recipe, a fix to an existing one, or an improvement to the website. The full guide is in the **Contributing** section of the [website](https://21centuryweather.github.io/Weather-Change-Cookbook/contributing).
+Contributions are welcome! Whether that's a new recipe, a fix to an existing one, or an improvement to the website. The full guide is in the **Contributing** section of the [website](https://cookbook.21centuryweather.org.au/contributing).
 
 You can [open an issue](https://github.com/21centuryweather/Weather-Change-Cookbook/issues) to discuss a contribution or a fix.
 
@@ -36,15 +38,27 @@ You can [open an issue](https://github.com/21centuryweather/Weather-Change-Cookb
 
 If you use this cookbook or one of its recipes in your work, please cite it:
 
-> [TODO: authors or organisation]. (2026). *The Weather Change Cookbook* [Online resource]. [TODO: publisher]. https://21centuryweather.github.io/Weather-Change-Cookbook/
+> Corrales, P., Respati, M. R., Brown, A., LIN, D., Alex, D., Barnes, M., Liqui Lung, F., Jakob, C., Gunn, A., & Reeder, M. (2026). The Weather Change Cookbook (Version v1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24488382. https://cookbook.21centuryweather.org.au
 
 ```bibtex
-@misc{weather_change_cookbook,
-  author = {[TODO: authors or organisation]},
-  title  = {The Weather Change Cookbook},
-  year   = {2026},
-  url    = {https://21centuryweather.github.io/Weather-Change-Cookbook/},
-  note   = {[TODO: add version and DOI once available]}
+@software{weather_change_cookbook,
+  author       = {Corrales, Paola and
+                  Respati, Muhamad Reyhan and
+                  Brown, Andrew and
+                  LIN, DONGQI and
+                  Alex, Dunne and
+                  Barnes, Michael and
+                  Liqui Lung, Franciscus and
+                  Jakob, Christian and
+                  Gunn, Andrew and
+                  Reeder, Michael},
+  title        = {The Weather Change Cookbook},
+  month        = nov,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.24488382},
+  url          = {https://doi.org/10.5281/zenodo.24488382},
 }
 ```
 

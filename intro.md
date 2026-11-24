@@ -21,6 +21,33 @@ You can navigate the recipes in the cookbook using the menu on the left. Each re
 
 If you use a recipe from the Cookbook for your research or teaching, or have based your analysis on one of the recipes, we would be grateful if you could cite:
 
+> Corrales, P., Respati, M. R., Brown, A., LIN, D., Alex, D., Barnes, M., Liqui Lung, F., Jakob, C., Gunn, A., & Reeder, M. (2026). The Weather Change Cookbook (Version v1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24488382. https://cookbook.21centuryweather.org.au 
+
+:::{note} Bibtex citation
+:class: dropdown
+```bibtex
+@software{weather_change_cookbook,
+  author       = {Corrales, Paola and
+                  Respati, Muhamad Reyhan and
+                  Brown, Andrew and
+                  LIN, DONGQI and
+                  Alex, Dunne and
+                  Barnes, Michael and
+                  Liqui Lung, Franciscus and
+                  Jakob, Christian and
+                  Gunn, Andrew and
+                  Reeder, Michael},
+  title        = {The Weather Change Cookbook},
+  month        = nov,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1.0},
+  doi          = {10.5281/zenodo.24488382},
+  url          = {https://doi.org/10.5281/zenodo.24488382},
+}
+```
+:::
+
 ```{image} https://www.21centuryweather.org.au/wp-content/uploads/NASA1-700x563.jpg
 :alt: Satellite image of Australia
 :align: center
