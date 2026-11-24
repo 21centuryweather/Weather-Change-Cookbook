@@ -28,3 +28,5 @@ Now you have all the components of the recipe. When running the recipe, make sur
 ## Instructions to use this recipe on mybinder
 
 To run this notebook on mybinder, click the binder badge. This will open a new browser window with a Jupyter notebook interface where you can run the code without installing the environment locally. 
+
+When using this option, take into account that mybinder resources are limited and the notebook may take a long time to run.
